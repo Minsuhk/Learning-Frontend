@@ -42,14 +42,6 @@ h2 {
   margin-bottom: 3.5%; /* Add margin to the bottom */
 }
 
-h3 {
-  font-size: 40px;
-  padding: 0px;
-  text-align: center;
-  margin-top: -75px;
-  margin-bottom: 3.5%; /* Add margin to the bottom */
-}
-
 /* Navigation buttons */
 .navbar {
   position: relative;
@@ -125,16 +117,14 @@ footer {
   font-family: 'AcmeRegular', sans-serif;
   background-color: #6DC0D5;
   color: #fff;
-  padding: 5px 0; /* Further reduce padding for a more compact footer */
-  margin-top: auto; /* Push the footer to the bottom */
   width: 100%; /* Ensure the footer spans the full width */
-  box-sizing: border-box;
   font-size: 14px; /* Adjust font size for a more compact look */
-  position: absolute; /* Position the footer at the bottom */
-  bottom: 0; /* Align the bottom edge of the element to the bottom of its containing element */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center horizontally */
+  position: fixed; /* Position the footer at the bottom */
+  left: 0; /* Align the bottom edge of the element to the left of the document */
+  bottom: 0; /* Align the bottom edge of the element to the bottom of the document */
+  right: 0;
+  z-index: 1; /* Ensure the footer stays above other content */
+  text-align: center; /* Center text horizontally within the footer */
   justify-content: center; /* Center vertically */
 }
 
@@ -142,6 +132,7 @@ footer {
   font-family: 'AcmeRegular', sans-serif;
   max-width: 100%;
   margin: 0 auto;
+  text-align: center;
 }
 
 /* Picture of myself */
