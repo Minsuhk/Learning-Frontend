@@ -125,24 +125,22 @@ footer {
   font-family: 'AcmeRegular', sans-serif;
   background-color: #6DC0D5;
   color: #fff;
-  padding: 10px 0; /* Further reduce padding for a more compact footer */
-  margin: 0; /* Push the footer to the bottom */
+  padding: 5px 0; /* Further reduce padding for a more compact footer */
+  margin-top: auto; /* Push the footer to the bottom */
   width: 100%; /* Ensure the footer spans the full width */
   box-sizing: border-box;
   font-size: 14px; /* Adjust font size for a more compact look */
- /*position: absolute; /* Position the footer at the bottom */
+  position: absolute; /* Position the footer at the bottom */
   bottom: 0; /* Align the bottom edge of the element to the bottom of its containing element */
   display: flex;
   flex-direction: column;
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */
-  max-width: 110%;
-  position: fixed;
-  margin-right: 0%;
 }
 
 .footer-container {
   font-family: 'AcmeRegular', sans-serif;
+  max-width: 100%;
   margin: 0 auto;
 }
 
