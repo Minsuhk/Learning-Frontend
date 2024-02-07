@@ -1,0 +1,109 @@
+const githubLogo = document.getElementById('github-logo');
+const GHmaxX = window.innerWidth - githubLogo.clientWidth;
+const GHmaxY = window.innerHeight - githubLogo.clientHeight;
+
+const linkedinLogo = document.getElementById('linkedin-logo');
+const LImaxX = window.innerWidth - linkedinLogo.clientWidth;
+const LImaxY = window.innerHeight - linkedinLogo.clientHeight;
+
+const emailLogo = document.getElementById('email-logo');
+const EmaxX = window.innerWidth - emailLogo.clientWidth;
+const EmaxY = window.innerHeight - emailLogo.clientHeight;
+
+let x = 0;
+let y = 0;
+let xSpeed = 3;
+let ySpeed = 3;
+
+function animateGHLogo() {
+    x += xSpeed;
+    y += ySpeed;
+
+    if (x > GHmaxX || x < 0) {
+        xSpeed = -xSpeed;
+    }
+
+    if (y > GHmaxY || y < 0) {
+        ySpeed = -ySpeed;
+    }
+
+    githubLogo.style.transform = `translate(${x}px, ${y}px)`;
+    requestAnimationFrame(animateGHLogo);
+}
+
+githubLogo.addEventListener('click', () => {
+    window.open('https://github.com/Minsuhk', '_blank');
+});
+
+function animateLILogo() {
+    x += xSpeed;
+    y += ySpeed;
+
+    if (x > LImaxX || x < 0) {
+        xSpeed = -xSpeed;
+    }
+
+    if (y > LImaxY || y < 0) {
+        ySpeed = -ySpeed;
+    }
+
+    linkedinLogo.style.transform = `translate(${x}px, ${y}px)`;
+    requestAnimationFrame(animateLILogo);
+}
+
+linkedinLogo.addEventListener('click', () => {
+    window.open('https://www.linkedin.com/in/nicholasmchung/', '_blank');
+});
+
+function animateELogo() {
+    x += xSpeed;
+    y += ySpeed;
+
+    if (x > EmaxX || x < 0) {
+        xSpeed = -xSpeed;
+    }
+
+    if (y > EmaxY || y < 0) {
+        ySpeed = -ySpeed;
+    }
+
+    emailLogo.style.transform = `translate(${x}px, ${y}px)`;
+    requestAnimationFrame(animateELogo);
+}
+
+emailLogo.addEventListener('click', () => {
+    window.open('mailto: nicholasmchung@gmail.com', '_blank');
+});
+
+animateGHLogo();
+
+animateLILogo();
+
+animateELogo();
+
+---------------------------------------------------------------------
+
+const githubLogo = document.querySelector('.github-logo');
+
+githubLogo.addEventListener('click', () => {
+    window.location.href = 'https://github.com/yourusername'; // Replace with your GitHub profile URL
+});
+
+-------------------------------------------------------------------------
+    <!-- <a href="https://github.com/Minsuhk" target="_blank" id="github-logo-link">
+        <img src="images\github-logo.png" alt="GitHub Logo" id="github-logo">
+    </a>
+    <script src="script.js"></script>
+    <a href="https://www.linkedin.com/in/nicholasmchung/" target="_blank" id="linkedin-logo-link">
+        <img src="images\linkedin-logo.png" alt="LinkedIn Logo" id="linkedin-logo">
+    </a>
+    <script src="script.js"></script>
+    <a href="mailto: nicholasmchung@gmail.com" target="_blank" id="emial-logo-link">
+        <img src="images\email-logo.png" alt="Email Logo" id="email-logo">
+    </a>
+    <script src="script.js"></script> -->
+
+    <!-- <div class="github-logo">
+        <img src="images\github-logo.png" alt="GitHub Logo">
+    </div>
+    <script src="script.js"></script> -->

@@ -1,0 +1,219 @@
+/* Needed Keyframes */
+@font-face {
+    font-family: 'AcmeRegular';
+    src: url('fonts/Acme-Regular.ttf') format('truetype'); /* Update the path and format as needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes GH_Orbit {
+    0% {
+    transform: rotate(0deg) translateX(400%) rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg) translateX(400%) rotate(-360deg);
+    }
+}
+  
+@keyframes LI_Orbit {
+    0% {
+    transform: rotate(35deg) translateY(400%) rotate(-35deg);
+    }
+    100% {
+    transform: rotate(395deg) translateY(400%) rotate(-395deg);
+    }
+}
+  
+@keyframes E_Orbit {
+    0% {
+    transform: rotate(160deg) translateY(400%) rotate(-160deg);
+    }
+    100% {
+    transform: rotate(520deg) translateY(400%) rotate(-520deg);
+    }
+}
+
+/* General formatting */
+body {
+    font-family: 'AcmeRegular', sans-serif;
+    margin: 0;
+    display: flex;
+    /* justify-content: center; This messes up nav bar*/
+    background-color: #E2E2A1;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body covers at least the full height of the viewport */
+    position: relative; /* Add position relative to contain absolute positioning within */
+}
+
+/* Short intro */
+h1 {
+    font-size: 40px; /* Adjust the font size as needed */
+    padding: 0px; /* Add padding to the main content if desired */
+    text-align: center;
+    margin-top: -5px;
+}
+
+h2 {
+    font-size: 100px; /* Adjust the font size as needed */
+    padding: 0px; /* Add padding to the main content if desired */
+    text-align: center;
+    margin-top: -20px;
+}
+
+h3 {
+    font-size: 40px; /* Adjust the font size as needed */
+    padding: 0px; /* Add padding to the main content if desired */
+    text-align: center;
+    margin-top: -75px;
+}
+
+/* Navigation buttons */
+.navbar {
+    font-family: 'AcmeRegular', sans-serif;
+    background-color: #6DC0D5;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navbar a:hover {
+    color: #F0F0C9;
+    background-color: #139ABB;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 80px; /* Increase the margin to space out the buttons */
+    margin-left: 80px;
+}
+
+.button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #2c9caf;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #2c9caf;
+}
+  
+button:hover {
+    color: #F0F0C9;
+    transform: scale(1.1);
+    outline: 2px solid #18b7df;
+    box-shadow: 4px 5px 17px -4px #e4e46b;
+}
+  
+button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #139ABB;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+  
+button:hover::before {
+    width: 250%;
+}
+
+/* Code for my picture */
+.centered-container {
+    text-align: center;
+}
+
+.centered-image {
+    border-radius: 10px;
+    max-width: 25%;
+    max-height: 25%;
+    margin: 20px; /* Add margin around the image for spacing */
+}
+
+/* Code for the logos */
+.container {
+    /*position: absolute;/*this shit broke my code bro wtf how do i fix alan pls save me*/
+    height: 100%;
+    width: 100%;
+}
+  
+.triangle-image {
+    position: absolute;
+    width: 50px; /* Adjust the width as needed */
+    height: auto;
+}
+  
+.gh-image,
+.li-image,
+.e-image {
+    position: absolute;
+    width: 50px; /* Adjust the width as needed */
+    /* height: auto; */
+}
+  
+.gh-image {
+    position: absolute;
+    top: 31.8%;
+    left: 48.7%; 
+    transform: translate(-50%, -350%);
+    animation: GH_Orbit 10s linear infinite;
+}
+
+.li-image {
+    position: absolute;
+    top: 31.8%;
+    left: 48.7%;
+    transform: translate(-50%, -350%);
+    animation: LI_Orbit 10s linear infinite;
+}
+
+.e-image {
+    position: absolute;
+    top: 31.8%;
+    left: 48.7%;
+    transform: translate(-50%, -350%);
+    animation: E_Orbit 10s linear infinite;
+}
+
+/* Code for the footer */
+footer {
+    font-family: 'AcmeRegular', sans-serif;
+    background-color: #6DC0D5;
+    color: #fff;
+    padding: 5px 0; /* Further reduce padding for a more compact footer */
+    margin-top: auto; /* Push the footer to the bottom */
+    width: 100%; /* Ensure the footer spans the full width */
+    box-sizing: border-box;
+    font-size: 14px; /* Adjust font size for a more compact look */
+    position: absolute; /* Position the footer at the bottom */
+    bottom: 0; /* Align the bottom edge of the element to the bottom of its containing element */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+  }
+  
+  .footer-container {
+    font-family: 'AcmeRegular', sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+  }

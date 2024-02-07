@@ -1,0 +1,273 @@
+@charset "UTF-8";
+/* Needed Keyframes */
+@font-face {
+    font-family: 'AcmeRegular';
+    src: url('fonts/Acme-Regular.ttf') format('truetype'); /* Update the path and format as needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General formatting */
+body {
+  font-family: 'AcmeRegular', sans-serif;
+  margin: 0%;
+  display: flex;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  /* justify-content: center; This messes up nav bar*/
+  background-color: #E2E2A1;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body covers at least the full height of the viewport */
+  position: relative; /* Add position relative to contain absolute positioning within */
+}
+
+/* Short intro */
+h1 {
+  font-size: 500%;
+  text-align: center;
+  margin-top: 0.5%;
+  margin-bottom: 3%; /* Add margin to the bottom */
+}
+
+h2 {
+  font-size: 250%;
+  padding: 0px;
+  text-align: center;
+  margin-top: -3%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 3.5%; /* Add margin to the bottom */
+}
+
+h3 {
+  font-size: 40px;
+  padding: 0px;
+  text-align: center;
+  margin-top: -75px;
+  margin-bottom: 3.5%; /* Add margin to the bottom */
+}
+
+/* Navigation buttons */
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1;
+  font-family: 'AcmeRegular', sans-serif;
+  background-color: #6DC0D5;
+  padding: 10px 0;
+  width: calc(100% + 200px);
+  max-width: inherit;
+  box-sizing: border-box;
+  margin-bottom: 1%;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 80px; /* Increase the margin to space out the buttons */
+  margin-left: 80px;
+}
+
+.button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+}
+
+button:hover {
+  color: #F0F0C9;
+  transform: scale(1.1);
+  outline: 2px solid #18b7df;
+  box-shadow: 4px 5px 17px -4px #e4e46b;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #139ABB;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+
+/* Code for the footer */
+footer {
+  font-family: 'AcmeRegular', sans-serif;
+  background-color: #6DC0D5;
+  color: #fff;
+  padding: 10px 0; /* Further reduce padding for a more compact footer */
+  margin: 0; /* Push the footer to the bottom */
+  width: 100%; /* Ensure the footer spans the full width */
+  box-sizing: border-box;
+  font-size: 14px; /* Adjust font size for a more compact look */
+ /*position: absolute; /* Position the footer at the bottom */
+  bottom: 0; /* Align the bottom edge of the element to the bottom of its containing element */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  max-width: 110%;
+  position: fixed;
+  margin-right: 0%;
+}
+
+.footer-container {
+  font-family: 'AcmeRegular', sans-serif;
+  margin: 0 auto;
+}
+
+/* Picture of myself */
+.left-aligned-img {
+  width: 20%;
+  height: 20%;
+  float: left; /* Align the image to the left */
+  margin-right: 20px; /* Add some right margin for spacing */
+}
+
+/*Create grid to hold buttons and 3d images*/
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 50%);
+  grid-template-rows: repeat(5, 50%);
+  grid-column-gap: 0px; 
+  grid-row-gap: 0px;
+}
+  
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 2 / 1 / 3 / 2; }
+.div4 { grid-area: 2 / 2 / 3 / 3; }
+
+/* Gundam Model */
+.iframe1{
+  background-color: transparent !important;
+  position: relative;
+  width: 80vw; /* Set the width of the iframe (adjust as needed) */
+  height: 20vw; /* Set the height of the iframe (adjust as needed) */
+  max-width: 90%; /* Set a maximum width to prevent it from getting too large */
+  max-height: 70%; /* Set a maximum height to prevent it from getting too tall */
+  display: grid; /* Make the iframe a block-level element to center it */
+  margin-left: 5%; /* Adjust the left margin as needed */
+  margin-top: -18.4%;
+  border-radius: 1em;
+}
+
+/* LoL Character Model */
+.iframe2 {
+  background-color: transparent !important;
+  position: relative;
+  width: 80vw;
+  height: 20vw;
+  max-width: 90%;
+  max-height: 70%;
+  display: grid;
+  margin-left: 105.5%; /* Align to the right within its container */
+  border-radius: 1em;
+  margin-top: -51.4%; /* Adjust the margin-top to align with the Gundam Unicorn */
+}
+
+/* Custom Dropdown Buttons */
+.tooltip-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column; /* Stack tooltips vertically */
+    align-items: center; /* Center the buttons horizontally */
+}
+
+.tooltip {
+    width: 98%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #282828;
+    color: #f1f1f1;
+    padding: 1% 2%;
+    border-radius: 1em;
+    box-sizing: border-box;
+    margin: 0 auto;
+    z-index: 1; /* Ensure buttons are above tooltips */
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    line-height: 2.3;
+    visibility: hidden;
+    width: 95%;
+    height: auto;
+    background-color: #23ccf7;
+    color: #282828;
+    text-align: center;
+    border-radius: 1em;
+    padding: 2%;
+    position: absolute;
+    z-index: -1; /* Ensure tooltips are below buttons */
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+} */
+
+/* Tooltip Scrollbar */
+.tooltip .tooltiptext, 
+.tooltip.experiences .tooltiptext {
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 150px; /* Set a maximum height for the textboxes */
+}
+
+.tooltip .tooltiptext::-webkit-scrollbar,
+.tooltip.experiences .tooltiptext::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.tooltip .tooltiptext::-webkit-scrollbar-track,
+.tooltip.experiences .tooltiptext::-webkit-scrollbar-track {
+  background: #23ccf7; /* Track color */
+}
+
+.tooltip .tooltiptext::-webkit-scrollbar-thumb,
+.tooltip.experiences .tooltiptext::-webkit-scrollbar-thumb {
+  background-color: #c4e7f8; /* Thumb color */
+  border-radius: 1em; /* Rounded corners for the thumb */
+  border: 2px solid #101314; /* Border around the thumb */
+}
+
+.tooltip .tooltiptext::-webkit-scrollbar-thumb:hover,
+.tooltip.experiences .tooltiptext::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Thumb color on hover */
+}
