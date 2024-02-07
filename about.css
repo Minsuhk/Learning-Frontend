@@ -119,7 +119,7 @@ footer {
   color: #fff;
   width: 100%; /* Ensure the footer spans the full width */
   font-size: 14px; /* Adjust font size for a more compact look */
-  position: absolute; /* Relative=Semi responsive & Fixed=Stuck to bottom of screen */
+  position: fixed; /* Relative=Semi responsive & Fixed=Stuck to bottom of screen */
   left: 0; /* Align the bottom edge of the element to the left of the document */
   bottom: 0; /* Align the bottom edge of the element to the bottom of the document */
   right: 0;
