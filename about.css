@@ -17,9 +17,10 @@ body {
   padding: 0px;
   width: 100%;
   height: 100%;
+
+  flex-direction: column;
   /* justify-content: center; This messes up nav bar*/
   background-color: #E2E2A1;
-  flex-direction: column;
   min-height: 100vh; /* Ensure body covers at least the full height of the viewport */
   position: relative; /* Add position relative to contain absolute positioning within */
 }
@@ -117,15 +118,14 @@ footer {
   font-family: 'AcmeRegular', sans-serif;
   background-color: #6DC0D5;
   color: #fff;
+  margin-top: auto;
   width: 100%; /* Ensure the footer spans the full width */
-  font-size: 14px; /* Adjust font size for a more compact look */
-  position: fixed; /* Relative=Semi responsive & Fixed=Stuck to bottom of screen */
-  left: 0; /* Align the bottom edge of the element to the left of the document */
-  bottom: 0; /* Align the bottom edge of the element to the bottom of the document */
-  right: 0;
+  /*position: fixed; /* Relative=Semi responsive & Fixed=Stuck to bottom of screen */
+  height: 100%;
+  font-size: 125%;
+  padding: 25px 0;
   z-index: 1; /* Ensure the footer stays above other content */
   text-align: center; /* Center text horizontally within the footer */
-  justify-content: center; /* Center vertically */
 }
 
 .footer-container {
